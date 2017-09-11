@@ -51,13 +51,20 @@ function downloadImageByURL(url, filePath) {
 }
 
 // getRepoContributors(repoOwner, repoName, downloadImageByURL);
+if (repoOwner && repoName && repoOwner !== "" && repoName !== ""){
 
-getRepoContributors(repoOwner, repoName, function(err, result) {
+  getRepoContributors(repoOwner, repoName, function(err, result) {
 
-  console.log("Errors:", err);
+    console.log("Errors:", err);
 
-  console.log("Result:", result);
+    console.log("Result:", result);
 
-  console.log("body:", body);
+    console.log("body:", body);
 
-});
+  });
+}
+else{
+  console.log("please enter a repoName and a repoOwner:")
+  console.log("usage:")
+  console.log("\tnode download_avatars repoName repoOwner")
+}
